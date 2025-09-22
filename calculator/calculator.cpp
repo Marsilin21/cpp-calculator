@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <cmath>
 #include "calculator.h"
@@ -15,8 +14,10 @@ bool ReadNumber(Number &result) {
 bool RunCalculatorCycle(){
 
     Number result = 0;
-    if (!ReadNumber(result)) return false;
-
+    if (!ReadNumber(result)) {
+        return false;
+    }
+    
     Number memory = 0;
     bool has_memory = false;
 
